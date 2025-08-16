@@ -22,7 +22,7 @@ while True:
         if deposito > 0: #regra: apenas valores positivos
             print('Valor depositado com sucesso!')
             saldo = saldo + deposito
-            extrato = f"\nDepósito: R$ {deposito:.2f}" 
+            extrato = f"\nDepósito: R$ {deposito:.2f}" #fstring para exibir o valor do depósito com duas casas decimais e sem espaços
         else:
             print('Valor inválido. Tente novamente.')
         continue
@@ -35,15 +35,15 @@ while True:
             numero_saques += 1
             saldo -= saque
             print('Saque realizado com sucesso!')
-            extrato += f"\nSaque: R$ {saque:.2f}"
+            extrato += f"\nSaque: R$ {saque:.2f}"#fstring para exibir o valor do saque com duas casas decimais e sem espaços
         continue
 
     elif opcao == '2': #operação de extrato
         print('Este é o extrato da sua conta: ' + extrato)
-        print('Saldo final: R$' + str(saldo))
+        print('Saldo final: R$' + str(saldo)) #transformação do saldo em string para exibição no formato R$
         continue
     
-    elif opcao == '3':
+    elif opcao == '3': #operação de saída
         print('Saindo do sistema...')
         break
     else:
